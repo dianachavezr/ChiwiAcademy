@@ -1,6 +1,7 @@
 # ¿Como clonar el repositorio ?
 * https://github.com/dianachavezr/ChiwiAcademy.git
 * composer install
+* npm install
 * duplicar el archivo .env.example y renombrarlo como .env
 * Crear la base de datos
 * generar la key (php artisan key:generate)
