@@ -7,6 +7,13 @@
 @stop
 
 @section('content')
+
+@if (session('info'))
+<div class="alert alert-success">
+    <strong class="">{{session('info')}}</strong>
+</div>
+    
+@endif
     <div class="card">
 
         <div class="card-header">
@@ -18,7 +25,7 @@
                   <thead class="">
                     <th class="">ID</th>
                     <th class="">Name</th>
-                    <th class="col-span-2"></th>                  
+                    <th class="" colspan="2"></th>                  
                     </thead>  
                 <tbody class="">
                     @foreach ($categories as$category )

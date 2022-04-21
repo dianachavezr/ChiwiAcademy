@@ -9,6 +9,8 @@ class Post extends Model
 {
     use HasFactory;
 
+    protected $guarded =['id', 'create_at', 'updated_at']; //habilitar asignación masiva
+
     //relación uno a muchos inversa
        //relación uno a muchos
 

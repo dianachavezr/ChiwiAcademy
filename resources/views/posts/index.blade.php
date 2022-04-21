@@ -12,7 +12,7 @@
                     md:col-span-2
                 @endif
                 " 
-                style="background-image: url({{Storage::url($post->image->url)}})"
+                style="background-image: url(@if($post->image){{Storage::url($post->image->url)}} @else https://cdn.pixabay.com/photo/2022/04/18/16/16/ship-7140939_960_720.jpg @endif)"
                  >
                 <div class="w-full h-full px-8 flex flex-col justify-center">
                  

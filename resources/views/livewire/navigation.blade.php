@@ -29,10 +29,10 @@
         </div>
         <div class="flex-2 flex items-center justify-center sm:items-stretch sm:justify-start">
          <a href="/" class="flex-shrink-0 flex items-center">
-           
+
             <img class="hidden lg:block h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg" alt="Workflow">
           </a >
-          <a href="">  <h1 class="text-white">ChiwiAcademy</h1></a>
+          <a href="">  <h1 class="text-white flex justify-center mb-5  mb-5 text-3xl  text-gray-600 ">ChiwiAcademy</h1></a>
           <div class="hidden sm:block sm:ml-6">
             <div class="flex space-x-4">
               <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
