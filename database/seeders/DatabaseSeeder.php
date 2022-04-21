@@ -20,7 +20,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         Storage::deleteDirectory('public/posts');
-        Storage::makeDirectory('public/posts');
+        Storage::makeDirectory('posts');
 
         $this -> call(UserSeeder::class);
         Category::factory(4)->create();
