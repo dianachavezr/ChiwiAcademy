@@ -14,15 +14,26 @@
 
         <form method="POST" action="{{ route('login') }}">
             @csrf
-
-            <div>
-                <x-jet-label for="email" value="{{ __('Email') }}" />
-                <x-jet-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
+            <div class="text-center mb-10">
+                <h1 class="font-bold text-3xl text-gray-900">Chiwi Acádemy</h1>
+                
             </div>
 
-            <div class="mt-4">
+            <div class="w-full px-3 mb-5 mt-4">
+                <x-jet-label for="email" value="{{ __('Email') }}" />
+                <div class="flex">
+                    <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="mdi mdi-email-outline text-gray-400 text-lg"></i></div>
+                    <x-jet-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus  placeholder="johnsmith@example.com"/>
+
+                </div>
+            </div>
+
+
+            <div class="w-full px-3 mb-12 mt-4">
                 <x-jet-label for="password" value="{{ __('Password') }}" />
-                <x-jet-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="current-password" />
+                <div class="flex">
+                    <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="mdi mdi-lock-outline text-gray-400 text-lg"></i></div>
+                    <x-jet-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="current-password"  placeholder="************" />
             </div>
 
             <div class="block mt-4">
@@ -45,4 +56,5 @@
             </div>
         </form>
     </x-jet-authentication-card>
+    <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/5.3.45/css/materialdesignicons.min.css')</style>
 </x-guest-layout>

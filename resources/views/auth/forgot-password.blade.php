@@ -3,8 +3,11 @@
         <x-slot name="logo">
             <x-jet-authentication-card-logo />
         </x-slot>
+        <div class="text-center mb-10">
+            <h1 class="font-bold text-3xl text-gray-900">Chiwi Acádemy</h1>
+        </div>
 
-        <div class="mb-4 text-sm text-gray-600">
+        <div class="mb-4 mt-4 text-sm text-gray-600">
             {{ __('Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.') }}
         </div>
 
@@ -18,6 +21,7 @@
 
         <form method="POST" action="{{ route('password.email') }}">
             @csrf
+
 
             <div class="block">
                 <x-jet-label for="email" value="{{ __('Email') }}" />
