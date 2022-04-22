@@ -34,12 +34,12 @@ Chiwi Acádemy is a software development collective that manages online events s
 * symfony
 
 ## Deploy 
-http://chiwiacademy.herokuapp.com/
+* http://chiwiacademy.herokuapp.com/
 ## Trello 
 * https://trello.com/b/UY6DCf62/chiwi-ac%C3%A1demy
 
 ## MOCKUP
-https://www.figma.com/file/gb8gqiyccbvzIeywZVPo3v/Untitled?node-id=0%3A1
+* https://www.figma.com/file/gb8gqiyccbvzIeywZVPo3v/Untitled?node-id=0%3A1
 
 
 
