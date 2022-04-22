@@ -83,7 +83,7 @@
         </div>
         <div class="col">
             <div class="form-group">
-                {!! Form::label('file', 'Imagen del post') !!}
+                {!! Form::label('file', 'Imagen del evento') !!}
                 {!! Form::file('file', ['class'=>'form-control-file', 'accept'=>'image/*']) !!}
                 @error('file')
                 <span class="text-danger">{{message}}</span> 
@@ -97,7 +97,7 @@
     </div>
 
     <div class="form-group">
-        {!! Form::label('extract', 'Extracto:') !!}
+        {!! Form::label('extract', 'Título del evento:') !!}
         {!! Form::textarea('extract', null, ['class'=>'form-control']) !!}
    
         @error('extract')
@@ -106,7 +106,7 @@
     </div>
 
     <div class="form-group">
-        {!! Form::label('body', 'Cuerpo del post:') !!}
+        {!! Form::label('body', 'Descripción del evento:') !!}
         {!! Form::textarea('body', null, ['class'=>'form-control']) !!}
     
         @error('body')

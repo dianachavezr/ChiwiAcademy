@@ -3,7 +3,7 @@
 @section('title', 'Dashboard')
 
 @section('content_header')
-    <h1>Crear nuevo post</h1>
+    <h1>Crear nuevo evento</h1>
 @stop
 
 @section('content')
@@ -14,7 +14,7 @@
             @include('admin.posts.partials.form')
 
   
-                 {!! Form::submit('Crear post', ['class'=>'btn btn-primary']) !!}
+                 {!! Form::submit('Crear evento', ['class'=>'btn btn-primary']) !!}
 
             {!! Form::close() !!}
        
