@@ -3,6 +3,11 @@
 @section('title', 'Dashboard')
 
 @section('content_header')
+
+@can('admin.categories.create')
+<a href="{{route('admin.categories.create')}}" class="btn btn-secondary float-right">Agregar Categoría</a>
+@endcan
+
     <h1>Lista de categorías</h1>
 @stop
 
@@ -15,10 +20,6 @@
     
 @endif
     <div class="card">
-
-        <div class="card-header">
-            <a href="{{route('admin.categories.create')}}" class="btn btn-info">Agregar Categoría</a>
-        </div>
 
         <div class="card-body">
             <table class="table table-striped">
@@ -33,14 +34,18 @@
                         <td class="">{{$category->id}}</td>
                         <td class="">{{$category->name}}</td>
                         <td class="" width='10px'>
+                            @can('admin.categories.edit')
                             <a href="{{route('admin.categories.edit', $category)}}" class="btn btn-primary btn-sm">Editar</a>
+                            @endcan
                         </td>
                         <td class="" width='10px'>
-                            <form action="{{route('admin.categories.destroy', $category)}}" method="POST">
-                                @csrf
-                                @method('delete')
-                                <button class="btn btn-danger btn-sm" type="submit">Eliminar</button>
-                            </form>
+                           @can('admin.categories.destroy')
+                           <form action="{{route('admin.categories.destroy', $category)}}" method="POST">
+                            @csrf
+                            @method('delete')
+                            <button class="btn btn-danger btn-sm" type="submit">Eliminar</button>
+                        </form>
+                           @endcan
                         </td>
                         
                     </tr>

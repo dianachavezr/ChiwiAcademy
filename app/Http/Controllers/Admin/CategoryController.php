@@ -9,14 +9,19 @@ use Illuminate\Http\Request;
 
 class CategoryController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    public function __construct()
+    {
+        $this->middleware('can:admin.categories.index')->only('index');
+        $this->middleware('can:admin.categories.create')->only('create', 'store');
+        $this->middleware('can:admin.categories.edit')->only('edit', 'update');
+        $this->middleware('can:admin.categories.destroy')->only('destroy');
+    }
+
+
+
     public function index()
     {
-        $categories = Category::all();    
+        $categories = Category::all();
         return view('admin.categories.index', compact('categories'));
     }
 
@@ -38,13 +43,13 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        $request ->validate([
+        $request->validate([
 
-            'name' =>'required',
-            'slug' =>'required|unique:categories'
+            'name' => 'required',
+            'slug' => 'required|unique:categories'
 
-        ]);    
-        
+        ]);
+
         $category = Category::create($request->all());
         return redirect()->route('admin.categories.edit', $category)->with('info', 'Categoría creada con éxito');
     }
@@ -80,13 +85,13 @@ class CategoryController extends Controller
      */
     public function update(Request $request, Category  $category)
     {
-        $request ->validate([
+        $request->validate([
 
-            'name' =>'required',
-            'slug' =>"required|unique:categories,slug,$category->id"
+            'name' => 'required',
+            'slug' => "required|unique:categories,slug,$category->id"
 
-        ]);  
-        
+        ]);
+
         $category->update($request->all());
 
         return redirect()->route('admin.categories.edit', $category)->with('info', 'Categoría actualizada con éxito');

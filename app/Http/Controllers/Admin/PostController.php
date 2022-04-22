@@ -8,6 +8,7 @@ use App\Models\Category;
 use App\Models\Post;
 use App\Models\Tag;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Storage;
 
 
@@ -15,11 +16,15 @@ use Illuminate\Support\Facades\Storage;
 
 class PostController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    public function __construct()
+    {
+        $this->middleware('can:admin.posts.index')->only('index');
+        $this->middleware('can:admin.posts.create')->only('create', 'store');
+        $this->middleware('can:admin.posts.edit')->only('edit', 'update');
+        $this->middleware('can:admin.posts.destroy')->only('destroy');
+    }
+
+
     public function index()
     {
         return view('admin.posts.index');
@@ -57,8 +62,9 @@ class PostController extends Controller
 
         $post->image()->create([
             'url' =>$url
-        ]); } 
-      
+        ]); 
+    } 
+      Cache::flush();
         
         //si se manda info de etiquetas se guarda info en tabla post_tag
         if($request->tags){
@@ -122,6 +128,9 @@ class PostController extends Controller
         if($request->tags){
             $post ->tags()->sync($request->tags);
         }
+
+        Cache::flush();
+
         return redirect()->route('admin.posts.edit', $post)->with('info', 'El post se actualizó con éxito');
     }
 
@@ -135,6 +144,9 @@ class PostController extends Controller
     {
         $this->authorize('author', $post);
         $post->delete();
+
+        Cache::flush();
+        
         return redirect()->route('admin.posts.index', $post)->with('info', 'El post se eliminó con éxito');
     }
 }
