@@ -1,13 +1,17 @@
-# ¿Como clonar el repositorio ?
+![chiwiAcademyr 1](https://user-images.githubusercontent.com/91891348/164756802-3c0f6fc6-0563-4169-94de-177a60ea845c.png)
+
+Chiwi Acádemy is a software development collective that manages online events such as workshops, masterclasses or webinars for developers, through our platform students can register for the event of their choice, the administrator will be in charge of managing the events, entering new events and upload an image.
+
+# How to clone the repository?
 * https://github.com/dianachavezr/ChiwiAcademy.git
 * composer install
 * npm install
-* duplicar el archivo .env.example y renombrarlo como .env
-* Crear la base de datos
-* generar la key (php artisan key:generate)
+* duplicate the file .env.example and rename it as .env
+* To create the data base
+* generate the key (php artisan key:generate)
 * php artisan migrate
 * php artisan migrate:fresh --seed
-* en la carpeta public crear una carpeta storage dentro de la carpeta storage crear carpeta posts (en esa carpeta quedaran nuestras imagenes de prueba)
+
 
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
