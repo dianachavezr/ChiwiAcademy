@@ -2,6 +2,13 @@
 
 Chiwi Acádemy is a software development collective that manages online events such as workshops, masterclasses or webinars for developers, through our platform students can register for the event of their choice, the administrator will be in charge of managing the events, entering new events and upload an image.
 
+![Captura de pantalla de 2022-04-25 09-05-50](https://user-images.githubusercontent.com/91891348/165105856-9b2e0f48-f783-47c2-9e53-a1fe0cf1652b.png)
+![Captura de pantalla de 2022-04-22 17-54-28](https://user-images.githubusercontent.com/91891348/165105880-3420d200-d17f-4d1c-8b11-e87d21a618b4.png)
+![Captura de pantalla de 2022-04-22 17-53-11](https://user-images.githubusercontent.com/91891348/165105891-abdca719-9346-4eaf-828a-f30d92db31e8.png)
+![Captura de pantalla de 2022-04-22 17-50-43](https://user-images.githubusercontent.com/91891348/165105901-b0176c96-c486-4bb8-ac5c-db91aaaa12d6.png)
+![Captura de pantalla de 2022-04-22 17-47-46](https://user-images.githubusercontent.com/91891348/165105917-95082373-6ff2-4bdc-b236-a129e0e9e900.png)
+76.png)
+
 # How to clone the repository?
 * https://github.com/dianachavezr/ChiwiAcademy.git
 * composer install
