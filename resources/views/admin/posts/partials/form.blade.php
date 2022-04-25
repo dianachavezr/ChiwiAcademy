@@ -1,6 +1,6 @@
 <div class="form-group">
     {!! Form::label('name', 'Nombre:') !!}
-    {!! Form::text('name', null, ['class'=>'form-control', 'placeholder'=> 'Ingrese el nombre del post']) !!}    
+    {!! Form::text('name', null, ['class'=>'form-control', 'placeholder'=> 'Ingrese el nombre del post']) !!}
 
         @error('name')
             <small class="text-danger">{{$message}}</small>
@@ -10,12 +10,12 @@
 
 <div class="form-group">
     {!! Form::label('slug', 'Slug') !!}
-    {!! Form::text('slug', null, ['class'=>'form-control', 'placeholder'=>'Ingrese el slug de la categoría', 'readonly']) !!}                
-    
+    {!! Form::text('slug', null, ['class'=>'form-control', 'placeholder'=>'Ingrese el slug de la categoría', 'readonly']) !!}
+
 
     @error('slug')
     <span class="text-danger">{{$message}}</span>
-      @enderror 
+      @enderror
 
 </div>
 
@@ -24,7 +24,7 @@
     <div class="form-group">
     {!! Form::label('category_id', 'Categoría') !!}
     {!! Form::select('category_id', $categories, null, ['class'=>'form-control']) !!}
-    
+
     @error('category_id')
     <small class="text-danger">{{$message}}</small>
 @enderror
@@ -37,10 +37,10 @@
             {!! Form::checkbox('tags[]', $tag->id, null) !!}
             {{$tag->name}}
         </label>
-            
+
         @endforeach
 
-      
+
 
         @error('tags')
         <br>
@@ -61,7 +61,7 @@
            Publicado
         </label>
 
-        
+
 
         @error('status')
         <br>
@@ -76,7 +76,7 @@
             @isset ($post->image)
             <img id='picture'src="{{Storage::url($post->image->url)}}" alt="" class="">
             @else
-            <img id='picture'src="https://cdn.pixabay.com/photo/2022/04/18/16/16/ship-7140939_960_720.jpg" alt="" class="">
+            <img id='picture'src="https://cdn.pixabay.com/photo/2017/02/19/15/28/winter-2080070_960_720.jpg" alt="" class="">
             @endisset
            </div>
 
@@ -86,9 +86,9 @@
                 {!! Form::label('file', 'Imagen del evento') !!}
                 {!! Form::file('file', ['class'=>'form-control-file', 'accept'=>'image/*']) !!}
                 @error('file')
-                <span class="text-danger">{{message}}</span> 
+                <span class="text-danger">{{message}}</span>
              @enderror
-            
+
             </div>
 
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste eum cupiditate maxime sequi soluta. Animi suscipit dicta voluptatem, officia, ea pariatur laudantium libero eum inventore, optio nulla provident incidunt delectus.</p>
@@ -99,7 +99,7 @@
     <div class="form-group">
         {!! Form::label('extract', 'Título del evento:') !!}
         {!! Form::textarea('extract', null, ['class'=>'form-control']) !!}
-   
+
         @error('extract')
         <small class="text-danger">{{$message}}</small>
     @enderror
@@ -108,7 +108,7 @@
     <div class="form-group">
         {!! Form::label('body', 'Descripción del evento:') !!}
         {!! Form::textarea('body', null, ['class'=>'form-control']) !!}
-    
+
         @error('body')
         <small class="text-danger">{{$message}}</small>
     @enderror

@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Storage;
 
 
-    
+
 
 class PostController extends Controller
 {
@@ -62,15 +62,15 @@ class PostController extends Controller
 
         $post->image()->create([
             'url' =>$url
-        ]); 
-    } 
+        ]);
+    }
       Cache::flush();
-        
+
         //si se manda info de etiquetas se guarda info en tabla post_tag
         if($request->tags){
             $post ->tags()->attach($request->tags);
         }
-        return redirect()->route('admin.posts.edit', $post);  
+        return redirect()->route('admin.posts.edit', $post);
     }
 
     /**
@@ -112,7 +112,7 @@ class PostController extends Controller
         $post ->update($request->all());
         if($request->file('file')){
             $url = Storage::put('posts', $request->file('file'));
-        
+
             if($post->image){
                 Storage::delete($post->image->url);
 
@@ -146,7 +146,7 @@ class PostController extends Controller
         $post->delete();
 
         Cache::flush();
-        
+
         return redirect()->route('admin.posts.index', $post)->with('info', 'El post se eliminó con éxito');
     }
 }
