@@ -12,6 +12,37 @@ Chiwi Acádemy is a software development collective that manages online events s
 * php artisan migrate
 * php artisan migrate:fresh --seed
 
+# Group members
+* Diana Chavez
+* Christian Lazo
+* Carlos Eduardo Martinez
+* Karen Vanesa Rosales
+* Laura Daniela Vargas
+
+# Technologies
+## Laravel
+* Jetstream
+* livewire
+* Node
+* Tailwin
+* Bootstrap
+* Laravel ui
+* Spatie
+* faker  
+* fortify 
+* simple-cache 
+* symfony
+
+## Deploy 
+* http://chiwiacademy.herokuapp.com/
+## Trello 
+* https://trello.com/b/UY6DCf62/chiwi-ac%C3%A1demy
+
+## MOCKUP
+* https://www.figma.com/file/gb8gqiyccbvzIeywZVPo3v/Untitled?node-id=0%3A1
+
+
+
 
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
